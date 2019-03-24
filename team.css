@@ -1,0 +1,279 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Ubuntu', sans-serif;
+}
+.active{
+	background-color: red;
+}
+
+.navbar{
+	border-radius: 0;
+	z-index: 9999;
+}
+.navbar-brand{
+	color: white;
+}
+.navbar-brand:hover{
+	color: white;
+	transform: scale(1.05);
+	transition: .2s;
+}
+
+.nav li a{
+	color: white;
+}
+.nav>li>a:focus, .nav>li>a:hover{
+	background-color: red;
+}
+.nav>li{
+	margin-left: 10px;
+}
+.navbar-nav>li>.hireUs{
+	background-color: red;
+	border-radius: 5px;
+	padding: 5px 25px;
+	margin-top: 10px;
+	margin-right: 20px;
+}
+.navbar-nav>li>.hireUs:hover{
+	background-color: white;
+	color: black;
+	font-weight: 900;
+}
+.hireUsBorder{
+	border: 2px solid black;
+}
+.navBackgroundColor{
+	background-color: white;
+}
+
+.teamBg{
+	height: 100vh;
+	background-image: url('img/teamImage.jpeg');
+	background-size: cover;	
+}
+.teamBgRgba{
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+.teamFlex{
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	align-items: flex-start;
+	color: white;
+}
+.teamFlex h1{
+	padding-top: 15%;
+	padding-bottom: 5%;
+}
+.teamFlex ul li{
+	font-size: 20px;
+	width: 100%;
+	margin-left: -2000px;
+}
+.paddingTopBot{
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+.colPaddingTopBot{
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+}
+.teamHeader{
+	width: 50%;
+}
+.GoodPpl:hover{
+	text-decoration: none;
+}
+.cards{
+	width: 100%;
+	background-size: cover;
+	background-position: top;
+	height: 30vh;
+}
+.card1{
+	background-image: url('img/person4.png');
+}
+.card2{
+	background-image: url('img/person2.png');
+}
+.card3{
+	background-image: url('img/person3.png');
+}
+.card4{
+	background-image: url('img/person6.png');
+}
+.card5{
+	background-image: url('img/person5.png');
+}
+.card6{
+	background-image: url('img/person14.png');
+}
+.card7{
+	background-image: url('img/person15.png');
+}
+.card8{
+	background-image: url('img/person7.png');
+}
+.card9{
+	background-image: url('img/person12.png');
+}
+.backgroundblacky{
+	background-color: black;
+}
+.Team h3{
+	color: white;
+}
+.Team h5{
+	color: red;
+}
+.meetTeam{
+	padding-bottom: 5rem;
+	color: white;
+}
+/* FOOTER-CLOCKS */
+.footerBg{
+	background-image: url('https://www.capcitycreative.ca/wp-content/uploads/2013/09/New-City-Wallpaper.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom;
+	height: 50vh;
+	color: white;
+}
+.footerBgRgba{
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 100%;
+}
+.footerBg h1{
+	padding-top: 4%;
+	padding-bottom: 5%;
+}
+.joinUsBtn, .hireUsBtn{
+	padding: 6% 20%;
+	border-radius: 0;
+}
+.joinUsBtn:hover, .hireUsBtn:hover{
+	font-weight: 900;
+	opacity: 0.9;
+}
+.joinUsBtn{
+	color: black;
+	background-color: white;
+}
+.hireUsBtn{
+	color: white;
+	background-color: red;
+}
+.location i {
+	color: red;
+}
+.rowPaddingTopBot{
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+ .clock {
+      width: 9rem;
+      height: 9rem;
+      border:1px solid white;
+      border-radius:50%;
+      margin:50px auto;
+      position: relative;
+      padding:2rem;
+      box-shadow:
+        0 0 0 4px rgba(0,0,0,0.1),
+        inset 0 0 0 5px #EFEFEF,
+        inset 0 0 10px black,
+        0 0 10px rgba(0,0,0,0.5);
+    }
+
+    .clock-face {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform: translateY(-3px); /* account for the height of the clock hands */
+    }
+
+    .hand {
+      width:50%;
+      height:2px;
+      background:black;
+      position: absolute;
+      top:50%;
+      transform-origin: 100%;
+      transform: rotate(90deg);
+      transition: all 0.05s;
+}
+.sec{
+	background:red;
+}
+.hour{
+	width: 30%;
+	left: 20%;
+}
+.givenHeight{
+	height: 70vh;
+}
+.dflex{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+.plussesDiv{
+	width: 60%;
+}
+.plussesDiv div{
+	width: 100%;
+	border-bottom: 1px solid grey;
+	padding-top: 3%;
+	padding-bottom: 3%;
+}
+.plussesDiv div h4{
+	font-weight: 900;
+}
+.plussesDiv i{ 
+	color: red;
+}
+.plussesDiv i:hover{
+	cursor: pointer;
+}
+.textBold{
+	font-weight: 900;
+}
+.socialLinksBg{
+	background-color: black;
+	color: white;
+}
+.socialLinks h4{
+	padding-left: 5%;
+}
+.adress h4 i{
+	margin-left: 25px;
+}
+.textUnderline{
+	padding-top: 3%;
+	text-decoration: underline;
+}
+.socialLinks p{
+	color: grey;
+	margin-left: 5%;
+	margin-top: 12%;
+	font-size: 20px;
+}
+.socialLinks ul{
+	margin-top: 10%;
+}
+.socialLinks ul li i{
+	color: white;
+	font-size: 25px;
+}
+.socialLinks ul li{
+	margin-left: 5%;
+}
+.socialLinks ul li i:hover{
+	color: red;
+	transform: scale(1.5);
+	transition: .5s;
+}
