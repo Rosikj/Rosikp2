@@ -3,79 +3,132 @@ $(function(){
 	AOS.init();
 
 	$(window).scrollTop(0);
+
 	let navCount = true;
-	$(window).scroll( ()=> {
+
+	if($(window).width() < 480){
+		$('.navbar').css({backgroundColor:'black'});
+	}
+
+	$(window).on('scroll', function(){
 		let currentPosition = $(".navbar").offset().top;
 		if(currentPosition > 0.5){
 			if(navCount){
+				$('.navbar-toggle .icon-bar').css({backgroundColor:'black'});
+				$('.logo').attr('src', 'img/logo.svg');
 				navCount = false;
-				$(".navbar").fadeOut(200);
-				$(".navbar").addClass('navBackgroundColor');
-				$(".hireUs").addClass('hireUsBorder');
-				$("nav li a").css({color: 'black',fontWeight: '900'});
-				$(".navbar").fadeIn(200);
-				$(".navbar-brand").css({color: 'black',fontWeight:'900'});
+				$(".navbar").css({transition: " .5s ease-in-out 0s"});
+				$(".navbar").css({backgroundColor:'white'});
+				$("nav li a").css({color: 'black'});
+				$(".nav>li>a, .nav>li>a").hover(function(){
+					$(this).css({color:'red',backgroundColor:'transparent'});
+				},function(){
+					$(this).css({color:'black',backgroundColor:'transparent'});
+				});
+				$("nav li .hireUs").hover(function() {
+					$(this).css({backgroundColor: 'black',color:'white'});
+				}, function() {
+					$(this).css({backgroundColor: 'red',color:'black'});
+				});
 			}
 		}else {
-			$(".navbar").fadeOut(200);
-			$(".navbar").removeClass('navBackgroundColor');
-			$(".hireUs").removeClass('hireUsBorder');
-			$("nav li a").css({color: 'white'});
-			$(".navbar-brand").css({color: 'white',fontWeight:'100'});
-			$(".navbar").fadeIn(200);
+			if($(window).width() < 480){
+				$('.navbar').css({backgroundColor:'black'});
+			}else{
+				$(".navbar").css({backgroundColor:'transparent'});
+			}
+			$('.navbar-toggle .icon-bar').css({backgroundColor:'white'});
+			$('.logo').attr('src', 'img/logoWhite.svg');
 			navCount = true;
+			$(".navbar").css({transition: " .5s ease-in-out 0s"});
+			$(".nav li a").css({color: 'white'});
+			$(".nav li a").hover(function(){
+				$(this).css({color:'red',backgroundColor:'transparent'});
+			},function(){
+				$(this).css({color:'white',backgroundColor:'transparent'});
+			});
 			$("nav li .hireUs").hover(function() {
-				$(this).css({color:'black'});
+				$(this).css({backgroundColor: 'white',color:'black'});
 			}, function() {
-				$(this).css({color:'white'})
+				$(this).css({backgroundColor: 'red',color:'white'})
 			});
 		}
 	});
 	
 	let teamLis = $(".teamLi");
 	for(let i = 0; i < teamLis.length; i++){
-		$(teamLis[i]).delay(i * 100).animate({marginLeft:"0"},1000);
+		$(teamLis[i]).delay(i * 150).animate({opacity:"1"});
 	}
-	$(window).scrollTop(0);
 
-	const secondHand = document.querySelector('.second-hand');
-	const minsHand = document.querySelector('.min-hand');
-	const hourHand = document.querySelector('.hour-hand');
-
-	let secounds = document.querySelectorAll('.sec');
-	let minss = document.querySelectorAll('.min');
-	let hours = document.querySelectorAll('.hour');
 	function setDate() {
-		const now = new Date();
+		const date = new Date();
 
-		const seconds = now.getSeconds();
-		const secondsDegrees = (seconds * 6) + 90;
-		secounds.forEach( function(element, index) {
-			element.style.transform = `rotate(${secondsDegrees}deg)`;
-		});
+		const seconds = date.getUTCSeconds();
+		const mins = date.getUTCMinutes();
+		const hour = date.getUTCHours();
 
-		const mins = now.getMinutes();
-		const minsDegrees = (mins * 6) + 90;
-		minss.forEach( function(element, index) {
-			element.style.transform = `rotate(${minsDegrees}deg)`;
-		});
+		var secondsDegrees;
+		secondsDegrees = (seconds * 6) + 90;
+		document.querySelector('.second-handLondon').style.transform = `rotate(${secondsDegrees}deg)`//London
+		document.querySelector('.second-handNY').style.transform = `rotate(${secondsDegrees}deg)`;//New York
+		document.querySelector('.second-handToronto').style.transform = `rotate(${secondsDegrees}deg)`//Toronto
+		document.querySelector('.second-handHK').style.transform = `rotate(${secondsDegrees}deg)`//Hong Kong
+		document.querySelector('.second-handBucharest').style.transform = `rotate(${secondsDegrees}deg)`//Bucharest
+		document.querySelector('.second-handWarsaw').style.transform = `rotate(${secondsDegrees}deg)`//Warsaw
 
-		const hour = now.getHours();
-		const hourDegrees = (hour * 30) + 90;
-		hours.forEach( function(element, index) {
-			element.style.transform = `rotate(${hourDegrees}deg)`;
-		});
+		var minsDegrees;
+		minsDegrees = (mins * 6) + 90;
+		document.querySelector('.min-handLondon').style.transform = `rotate(${minsDegrees}deg)`;//London
+		document.querySelector('.min-handNY').style.transform = `rotate(${minsDegrees}deg)`;//New York
+		document.querySelector('.min-handToronto').style.transform = `rotate(${minsDegrees}deg)`//Toronto
+		document.querySelector('.min-handHK').style.transform = `rotate(${minsDegrees}deg)`//Hong Kong
+		document.querySelector('.min-handBucharest').style.transform = `rotate(${minsDegrees}deg)`//Bucharest
+		document.querySelector('.min-handWarsaw').style.transform = `rotate(${minsDegrees}deg)`//Warsaw
+
+		var hourDegrees;
+		hourDegrees = (hour * 30) + 90;
+		document.querySelector('.hour-handLondon').style.transform = `rotate(${hourDegrees}deg)`;//London
+		hourDegrees -= minsDegrees;
+		hourDegrees = (hour * 30 - 120) + 90 ;
+		document.querySelector('.hour-handNY').style.transform = `rotate(${hourDegrees}deg)`;//New York
+		document.querySelector('.hour-handToronto').style.transform = `rotate(${hourDegrees}deg)`//Toronto
+		hourDegrees -= hourDegrees;
+		hourDegrees = (hour * 30 + 240) + 90 ;
+		document.querySelector('.hour-handHK').style.transform = `rotate(${hourDegrees}deg)`//Hong Kong
+		hourDegrees -= hourDegrees;
+		hourDegrees = (hour * 30 + 60) + 90 ;
+		document.querySelector('.hour-handBucharest').style.transform = `rotate(${hourDegrees}deg)`//Bucharest
+		hourDegrees -= hourDegrees;
+		hourDegrees = (hour * 30 + 30) + 90 ;
+		document.querySelector('.hour-handWarsaw').style.transform = `rotate(${hourDegrees}deg)`//Warsaw
 	}
 
 	setInterval(setDate, 1000);
 
 	setDate();
+
 	$(".hiddenPlusText").hide();
 	$(".fa-plus").click(function(){
-		$(this).fadeOut("fast").delay(10).fadeIn('fast');
+		// $(this).addClass('clicked');
+		$(this).animate({opacity:'0.1'},100,function(){
+			$(this).animate({opacity:'1'},100);
+		})
 		$(this).toggleClass('fa-minus');
 		$(this).toggleClass('fa-plus');
 		$(this).parent().parent().children('h5').slideToggle('fast');
+		$('.plussesDiv div i').not(this).parent().parent().children('h5').slideUp('fast');
+		$('.plussesDiv div i').not(this).removeClass('fa-minus');
+		$('.plussesDiv div i').not(this).addClass('fa-plus');
 	});
+
+
+	//If we open inspect and and go to 425px it will not remove the attributes-why would someone do this.
+	//Thatws why when  we open the website for the first time on phone this will work and will remove the attributes.
+	if($(window).width() <= 480) {
+		$(".clockDiv").removeAttr('data-aos');
+		$(".global").removeAttr('data-aos');
+		$(".btnsCol div").removeAttr('data-aos');
+		$('.location').removeAttr('data-aos');
+	}
 
 });
