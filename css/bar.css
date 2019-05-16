@@ -1,0 +1,65 @@
+.bar {
+    margin-top: 1rem;
+    border-radius: 3px;
+    /* width: 4.8rem; */
+    position: relative;
+    background-image: url('../img/barWall.png');
+    background-attachment: fixed;
+}
+
+.progress-vertical {
+    border-radius: 3px;
+    padding-right: 1px;
+    padding-bottom: 13px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 40px;
+    height: 300px;
+    overflow: hidden;
+    float: left;
+}
+
+.progress-vertical2 {
+    width: 14rem;
+}
+
+.barSmall {
+    width: 1.7rem;
+    margin: 0 1%;
+}
+
+.bar1 {
+    background-color: #7738ff;
+    background-image: none;
+}
+
+.text-white {
+    color: rgb(223, 219, 219);
+    display: block;
+    text-align: center;
+    font-size: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    -webkit-transition: color 0.2s;
+    -moz-transition: color 0.2s;
+    -o-transition: color 0.2s;
+    -ms-transition: color 0.2s;
+    transition: color 0.2s;
+    z-index: 2;
+}
+
+.bar2 {
+    width: 12rem;
+}
+
+.bar4 {
+    background-color: #fe6382;
+    background-image: none;
+}
+
+.bar3 {
+    background-color: #9be4ef;
+    background-image: none;
+}

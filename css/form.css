@@ -1,0 +1,323 @@
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	position: relative;
+	font-family: FontMedium;
+	background-image: url('../img/Form-bg.svg');
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+@font-face {
+	font-family: FontMedium;
+	src: url(../Circular/CircularStd-Medium.otf);
+}
+
+.wrapper {
+	width: 100%;
+	padding-top: 40vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+form {
+	width: 50%;
+}
+
+.que {
+	padding: 10px;
+	width: 100%;
+	margin-bottom: 25rem;
+}
+
+.questionHeader {
+	position: relative;
+	margin: 0;
+}
+
+.question1 h3 {
+	margin-top: 10px;
+}
+
+.questionHeader:before {
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 23px;
+	color: #6630d8;
+	position: absolute;
+	left: -60px;
+}
+
+.q1:before {
+	content: '1 ➜';
+}
+
+.q2:before {
+	content: '2 ➜';
+}
+
+.q3:before {
+	content: '3 ➜';
+}
+
+.q4:before {
+	content: '4 ➜';
+}
+
+.q5:before {
+	content: '5 ➜';
+}
+
+.q6:before {
+	content: '6 ➜';
+}
+
+.q7:before {
+	content: '7 ➜';
+}
+
+.q8:before {
+	content: '8 ➜';
+}
+
+.q9:before {
+	content: '9 ➜';
+}
+
+.q10:before {
+	content: '10 ➜';
+}
+
+.q11:before {
+	content: '11 ➜';
+}
+
+.q12:before {
+	content: '12 ➜';
+	top: 10%;
+	transform: translateY(-10%);
+}
+
+.q13:before {
+	content: '13 ➜';
+	top: 10%;
+	transform: translateY(-10%);
+}
+
+.q14:before {
+	content: '14 ➜';
+	top: 45%;
+	transform: translateY(-45%);
+}
+
+.q15:before {
+	content: '15 ➜';
+	top: 45%;
+	transform: translateY(-45%);
+}
+
+.input12:focus {
+	outline: none;
+}
+
+.mainDivChoices {
+	display: flex;
+	width: 100%;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+.mainDivChoices label {
+	text-align: center;
+	width: 9.9%;
+	padding: 20px;
+	border: 1px solid #5829BC;
+	border-radius: 0;
+	border-left: 0;
+	background-color: #7738FF;
+	color: white;
+}
+
+.mainDivChoices label:nth-child(1) {
+	border-left: 1.5px solid #5829BC;
+}
+
+.mainDivChoices label:hover {
+	background-color: #6630d8;
+	cursor: pointer;
+}
+
+.mainDivChoices input {
+	display: none;
+}
+
+.que span {
+	color: #7738FF;
+	font-weight: 700;
+	font-size: 15px;
+	display: inline-block;
+	width: 49%;
+}
+
+.input-group {
+	width: 100%;
+}
+
+.input12 {
+	margin-top: 40px;
+	font-size: 35px;
+	width: 80%;
+	margin-right: 15px;
+	border-width: 0;
+	border-bottom: 1.5px solid #6630d8;
+}
+
+.btn12 {
+	background-color: #7738FF;
+	color: white;
+	padding: 1.2rem 2.8rem;
+	position: relative;
+}
+
+.btn12:hover {
+	opacity: 0.9;
+	color: white;
+}
+
+.btn12:focus {
+	outline: none;
+	color: white;
+}
+
+.input12::placeholder {
+	color: #6630d8;
+	font-size: 30px;
+	opacity: 0.3;
+}
+
+.LabelsRadios {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.LabelsRadios label {
+	border: 1.5px solid #5829BC;
+	height: 45px;
+	width: 30%;
+	margin-right: 15px;
+	padding-top: 9px;
+	padding-bottom: 7px;
+	padding-left: 10px;
+	background-color: #7738FF;
+	color: white;
+	font-size: 18px;
+	border-radius: 4px;
+}
+
+.LabelsRadiosLast label {
+	margin-right: 7px;
+	width: 22%;
+}
+
+.LabelsRadios label:hover {
+	background-color: #6630d8;
+	cursor: pointer
+}
+
+.LabelsRadios input {
+	display: none;
+}
+
+.question15 {
+	margin-bottom: 20rem;
+}
+
+.SubmitBtn {
+	margin: 0;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 15px 50px;
+	margin-bottom: 20rem;
+	background-color: #5829bc;
+	color: white;
+}
+
+.SubmitBtn:hover {
+	background-color: #7738ff;
+	color: white;
+}
+
+/* PROGRESBAR */
+
+#pb {
+	background: #ccc;
+	width: 350px;
+	height: 48px;
+	position: fixed;
+	z-index: 9999;
+	top: 85%;
+	left: 50%;
+	transform: translateY(-80%);
+	transform: translateX(-50%);
+	border-radius: 8px;
+	border-top: 2px solid #DDD;
+	border-left: 2px solid #DDD;
+	border-bottom: 2px solid #BBB;
+	border-right: 2px solid #BBB;
+	padding: 3px;
+	overflow: hidden;
+	text-align: center;
+	line-height: 38px;
+	font-size: 14px;
+	font-weight: bold;
+	color: black;
+}
+
+#pb>span {
+	position: relative;
+	z-index: 999;
+}
+
+#progress {
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	height: 38px;
+	width: 0px;
+	border-radius: 6px;
+	background: #9be4ef;
+	/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db3f2', endColorstr='#1e69de', GradientType=0);
+	/* IE6-8 */
+	-webkit-box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2), 2px 2px 5px rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2), 2px 2px 5px rgba(0, 0, 0, 0.2);
+	position: absolute;
+	overflow: hidden;
+}
+
+.progressText {
+	background-color: transparent;
+	border: none;
+	position: relative;
+	z-index: 999;
+}
+
+.progressText:hover {
+	cursor: pointer;
+}
+
+.progressText:focus {
+	outline: none;
+	color: black;
+}
+
+#pb:hover, #progress:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
