@@ -1163,6 +1163,17 @@
     .high-low {
         top: 22px;
     }
+    .mainDivChoices{
+        flex-wrap: wrap;
+    }
+    .mainDivChoices label{
+        width: 19.9%;
+        padding: 15px 7px;
+    }
+    .LabelsRadios label{
+        width: 44%;
+        padding: 10px 10px;
+    }
 }
 
 @media screen and (max-width: 388px) {
